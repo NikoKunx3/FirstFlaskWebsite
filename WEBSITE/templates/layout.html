@@ -5,22 +5,20 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{% block title %}{% endblock %}</title>
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
     </head>
     <body>
-        <div class="navbar">
-            <a href="{{ url_for('home') }}" class="navbar-brand">Home</a>
-            <a href="{{ url_for('about') }}" class="navbar-item">About</a>
-            <a href="{{ url_for('contact') }}" class="navbar-item">Contact</a>
+        <div id="navbar">
+            <p id="brand">WKSP</p>
+            <p id="datetime"> </p>
+            <ul id="menu">
+                <li id="menu-item"><a href="{{ url_for('home') }}">Home</a></li>
+                <li id="menu-item"><a href="{{ url_for('about') }}">About me</a></li>
+                <li id="menu-item"><a href="{{ url_for('contact') }}">Contact</a></li>
+            </ul>
         </div>
-
-        <div class="content">
-            {% block content %}
-            {% endblock %}
-            <hr/>
-            <footer>
-                <p>Nikodem Skrzypczak © 2022</p>
-            </footer>
-        </div>
+        {% block content %}
+        {% endblock %}
+        <script src="{{ url_for('static', filename='js/datetime.js') }}"></script>
     </body>
 </html>
