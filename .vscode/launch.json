@@ -10,7 +10,7 @@
             "request": "launch",
             "module": "flask",
             "env": {
-                "FLASK_APP": "app.py",
+                "FLASK_APP": "./WEBSITE/app.py",
                 "FLASK_ENV": "development"
             },
             "args": [
@@ -18,7 +18,7 @@
                 "--no-debugger"
             ],
             "jinja": true,
-            "justMyCode": true
+            "justMyCode": false
         }
     ]
 }
