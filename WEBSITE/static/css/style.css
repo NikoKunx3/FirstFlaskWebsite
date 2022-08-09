@@ -18,6 +18,14 @@ body {
     color: white;
 }
 
+.time 
+{
+    display: flex;
+    margin: 0;
+    /* position: absolute; */
+    justify-content: center;
+}
+
 #menu {
     list-style: none;
     display: flex;
